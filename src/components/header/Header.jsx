@@ -3,13 +3,13 @@ import { BsMoon } from 'react-icons/bs'
 
 export const Header = () => {
   return (
-    <Box display="flex" alignItems='center' height="50px"  shadow='md'>
+    <Box display="flex" alignItems='center' height="70px"  shadow='md'>
         <Container maxW='8xl'>
             <Stack direction='row' justify='space-between' align='center'>
-                <Text fontWeight="700">
+                <Text fontWeight="700" fontSize="20px">
                     Where in the World?
                 </Text>
-                <Button leftIcon={<BsMoon />} variant='ghost'>Dark mode</Button>
+                <Button leftIcon={<BsMoon />} variant='ghost' color="gray" fontSize="16px">Dark mode</Button>
             </Stack>
         </Container>
     </Box>
