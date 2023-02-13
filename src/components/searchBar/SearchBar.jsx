@@ -8,14 +8,19 @@ export const SearchBar = () => {
         <InputGroup>
           <InputLeftElement
             pointerEvents='none'
-            children={<AiOutlineSearch  color='gray' />}
+            children={<AiOutlineSearch fontSize='22px' color='gray' />}
           />
-          <Input type='text' placeholder='search for a country...' />
+          <Input size='lg' type='text' color='gray' fontSize='16px' placeholder='search for a country...' />
         </InputGroup>
       </Box>
       <Box>
-        <Select>
-          
+        <Select color='gray' fontSize='16px' size='lg'>
+          <option selected value='all'>All regions</option>
+          <option value='africa'>Africa</option>
+          <option value='america'>America</option>
+          <option value='asia'>Asia</option>
+          <option value='europe'>Europe</option>
+          <option value='oceania'>Oceania</option>
         </Select>
       </Box>
     </Stack>
