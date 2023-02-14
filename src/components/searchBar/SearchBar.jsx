@@ -3,18 +3,18 @@ import { AiOutlineSearch } from 'react-icons/ai'
 
 export const SearchBar = () => {
   return (
-    <Stack direction="row" marginTop='60px' justify='space-between'>
+    <Stack direction="row" marginTop='60px' justify='space-between' backgroundColor='f3f3f3'>
       <Box>
         <InputGroup>
           <InputLeftElement
             pointerEvents='none'
             children={<AiOutlineSearch fontSize='22px' color='gray' />}
           />
-          <Input size='lg' type='text' color='gray' fontSize='16px' placeholder='search for a country...' />
+          <Input bg='white' size='lg' type='text' color='gray' fontSize='16px' placeholder='search for a country...' />
         </InputGroup>
       </Box>
       <Box>
-        <Select color='gray' fontSize='16px' size='lg'>
+        <Select bg='white' color='gray' fontSize='16px' size='lg'>
           <option selected value='all'>All regions</option>
           <option value='africa'>Africa</option>
           <option value='america'>America</option>
