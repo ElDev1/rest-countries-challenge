@@ -1,12 +1,13 @@
-import { Box, Container, Grid, GridItem } from "@chakra-ui/react"
+import { Box, Container, Grid, GridItem, useColorModeValue } from "@chakra-ui/react"
 import { Card } from "../../components/card/Card"
 import { Header } from "../../components/header/Header"
 import { SearchBar } from "../../components/searchBar/SearchBar"
 import data from '../../services/data.json'
 
 export const Main = () => {
+  const bgColor = useColorModeValue("f9f9f9", "#2c2c2c") 
   return (
-    <Box bgColor='#f9f9f9'>
+    <Box bgColor={bgColor}>
         <Header />
         <Container maxW="8xl">
             <SearchBar />

@@ -1,6 +1,7 @@
 import { Stack, Box, InputGroup, InputLeftElement, Select, Input } from "@chakra-ui/react"
 import { AiOutlineSearch } from 'react-icons/ai'
 
+
 export const SearchBar = () => {
   return (
     <Stack direction="row" marginTop='60px' justify='space-between' backgroundColor='f3f3f3'>

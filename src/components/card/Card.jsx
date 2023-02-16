@@ -1,8 +1,10 @@
-import { Box, Stack, Image, Text } from "@chakra-ui/react"
+import { Box, Stack, Image, Text, useColorModeValue } from "@chakra-ui/react"
 
 export const Card = ({ img, title, population, region, capital }) => {
+  const bgColor = useColorModeValue("white", "#403f3f") 
+
   return (
-    <Stack direction='column' h='400px' bgColor='white' shadow='base'>
+    <Stack direction='column' h='400px' bgColor={bgColor} shadow='base' cursor='pointer'>
       <Box w='100%' h='200px'>
         <Image src={img} objectFit='cover' boxSize='100%'/>
       </Box>
