@@ -8,7 +8,7 @@ export const CardDetails = ({ data }) => {
   const { name } = useParams()
   const filterData = data.filter(country => country.name.toLowerCase() === name.toLowerCase())
   const countryData = filterData[0];
-  console.log(countryData)
+
   return (
     <Box>
       <Header />
@@ -55,11 +55,17 @@ export const CardDetails = ({ data }) => {
                   </Text>
                 </Stack>
               </Stack>
-              <Stack direction='row' mt='50px'>
+              <Stack direction='row' mt='50px' alignItems='center'>
                 <Text as='b'>Border Countries: </Text>
-                <Stack direction='row'>
+                <Stack direction='row' flexWrap='wrap' gap='5px'>
                   {
-                    
+                    countryData.borders.map(country => {
+                      return (
+                        <Box h='40px' m='0' p='0 10px' display='flex' boxShadow='base' alignItems='center' justifyContent='center'>
+                          {country}
+                        </Box>
+                      )
+                    })
                   }
                 </Stack>
               </Stack>
