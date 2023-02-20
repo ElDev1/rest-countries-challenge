@@ -1,8 +1,17 @@
+import { useState } from "react"
+
 import { Stack, Box, InputGroup, InputLeftElement, Select, Input } from "@chakra-ui/react"
 import { AiOutlineSearch } from 'react-icons/ai'
 
 
-export const SearchBar = () => {
+export const SearchBar = ({ handleSearchData }) => {
+  const [text, setText] = useState('')
+
+  const handleText = (e) => {
+    setText(e.currentTarget.value)
+    handleSearchData(e.currentTarget.value)
+  }
+
   return (
     <Stack direction="row" marginTop='60px' justify='space-between' backgroundColor='f3f3f3'>
       <Box>
@@ -11,7 +20,7 @@ export const SearchBar = () => {
             pointerEvents='none'
             children={<AiOutlineSearch fontSize='22px' color='gray' />}
           />
-          <Input bg='white' size='lg' type='text' color='gray' fontSize='16px' placeholder='search for a country...' />
+          <Input value={text} onChange={handleText} bg='white' size='lg' type='text' color='gray' fontSize='16px' placeholder='search for a country...' />
         </InputGroup>
       </Box>
       <Box>
