@@ -59,7 +59,7 @@ export const CardDetails = ({ data }) => {
                 <Text as='b'>Border Countries: </Text>
                 <Stack direction='row' flexWrap='wrap' gap='5px'>
                   {
-                    countryData.borders.map(country => {
+                    countryData.borders?.map(country => {
                       return (
                         <Box h='40px' m='0' p='0 10px' display='flex' boxShadow='base' alignItems='center' justifyContent='center'>
                           {country}

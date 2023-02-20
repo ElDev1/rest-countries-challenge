@@ -4,12 +4,18 @@ import { Stack, Box, InputGroup, InputLeftElement, Select, Input } from "@chakra
 import { AiOutlineSearch } from 'react-icons/ai'
 
 
-export const SearchBar = ({ handleSearchData }) => {
+export const SearchBar = ({ handleSearchData, handleSelectRegion }) => {
   const [text, setText] = useState('')
+  const [select, setSelect] = useState('all')
 
   const handleText = (e) => {
     setText(e.currentTarget.value)
     handleSearchData(e.currentTarget.value)
+  }
+  
+  const handleSelectValue = (e) => {
+    setSelect(e.currentTarget.value)
+    handleSelectRegion(e.currentTarget.value)
   }
 
   return (
@@ -24,7 +30,7 @@ export const SearchBar = ({ handleSearchData }) => {
         </InputGroup>
       </Box>
       <Box>
-        <Select bg='white' color='gray' fontSize='16px' size='lg'>
+        <Select value={select} onChange={handleSelectValue} bg='white' color='gray' fontSize='16px' size='lg'>
           <option selected value='all'>All regions</option>
           <option value='africa'>Africa</option>
           <option value='america'>America</option>
