@@ -42,5 +42,5 @@ Start the server
 
 ## Demo
 
-Insert gif or link to demo
+[live demo](https://rest-countries-challenge-umber.vercel.app/)
 
