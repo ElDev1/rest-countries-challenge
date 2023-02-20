@@ -10,7 +10,6 @@ import Error from './pages/error/Error'
 import { Main } from './pages/main/Main'
 import { CardDetails } from './pages/cardDetails/CardDetails'
 
-import './index.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import data from './services/data.json'
 
